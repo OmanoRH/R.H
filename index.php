@@ -6,6 +6,9 @@
         <title>Document</title>
     </head>
     <body>
+        <h1>
+            pindamongoiaba
+        </h1>
         <?php
         $nome = "A";
         echo "<h2>$nome</h2>";
