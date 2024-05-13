@@ -9,6 +9,7 @@
         <h1>
             pindamongoiaba
         </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, consequatur nihil molestiae accusamus, cupiditate exercitationem ex in et nostrum ea quo non esse laudantium officiis architecto. Quaerat voluptatum corporis recusandae?</p>
         <?php
         $nome = "A";
         echo "<h2>$nome</h2>";
