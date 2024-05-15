@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
         <?php
@@ -183,4 +183,16 @@
         
         ?>
 
+
+
+
+        <h1>Titulo</h1>
+
+        <form action="receber_post.php" method="POST">
+            <input type="text" name="nome" placeholder="Digite seu Nome"> <br>
+            <input type="text" name="idade" placeholder="Digite sua Idade"><br>
+            <input type="password" name="senha" placeholder="Digite sua Senha"><br>
+            <button type="submit">Enviar</button> 
+        </form>
+    </body>
 </html>
