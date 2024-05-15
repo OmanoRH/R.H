@@ -105,12 +105,47 @@
 
         <?php
 
-        for($val = 4;){
-
+        for($val = 0; $val <= 10; $val++){
+            $entrada = 4;
+            $multi = $val * $entrada;
+            echo "4 x $val = $multi <br>";
         }
 
         ?>
+
         <br><br>
+
+        <h3>Exercicio 7</h3>
+
+        <?php
+
+        
+        
+        ?>
+
+        <br><br>
+        
+        <h3>Exercicio 8</h3>
+
+        <?php
+
+        
+        
+        ?>
+
+        <br><br>
+
+        <h3>Exercicio 9</h3>
+
+        <?php
+
+        
+        
+        ?>
+        
+        <br><br>
+
+        <h3>Exercicio 10</h3>
 
         <?php
 
