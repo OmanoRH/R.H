@@ -25,6 +25,8 @@
         <br>
         <br>
         
+        <h3>Exercicio 1</h3>
+
         <?php
 
         $x = 2;
@@ -37,6 +39,8 @@
         ?>
 
         <br><br>
+
+        <h3>Exercicio 2</h3>
 
         <?php
 
@@ -52,6 +56,8 @@
 
         <br> <br>
 
+        <h3>Exercicio 3</h3>
+
         <?php
 
         $valor = 100;
@@ -62,6 +68,8 @@
         ?>
 
         <br><br>
+
+        <h3>Exercicio 4</h3>
 
         <?php
 
@@ -75,8 +83,10 @@
 
         <br><br>
 
+        <h3>Exercicio 5</h3>
+
         <?php
-        $x = 0;
+        $x = 1;
         if($x >0){
             echo ("Valor Positivo");
         }
@@ -89,16 +99,23 @@
 
         ?>
 
+        <br><br>
+
+        <h3>Exercicio 6</h3>
+
         <?php
 
-        for($i = 0; $i >= 10; $i++){
-            $multi = 4 * $i;
-            echo $multi;
+        for($val = 4;){
+
         }
 
         ?>
+        <br><br>
 
         <?php
+
+        
+        
         ?>
 
 </html>
