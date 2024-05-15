@@ -119,18 +119,32 @@
 
         <?php
 
-        
-        
+        $X = 4;
+ 
+        if($X % 2 == 0){
+            echo "par";
+        }
+        else{
+            echo "impar";
+        }
         ?>
 
         <br><br>
-        
+
         <h3>Exercicio 8</h3>
 
         <?php
 
-        
-        
+        $A = 3;
+        $B = 10;
+
+        if($A > $B){
+            echo "$B $A";
+        }
+        else{
+            echo "$A $B";
+        }
+
         ?>
 
         <br><br>
@@ -139,7 +153,15 @@
 
         <?php
 
-        
+        $a = 5;
+        $b = 2;
+        if($a > $b){
+        echo "A maior que B";
+        }
+
+        else{
+        echo "A menor que B";
+        }
         
         ?>
         
@@ -149,7 +171,15 @@
 
         <?php
 
-        
+        $x = 17;
+        if($x >= 18){
+          echo "Fulano é maior de idade e tem $x anos de idade";
+        }
+
+        else{
+          echo "Fulano não é maior de idade e tem $x anos de idade";
+        }
+
         
         ?>
 
