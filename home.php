@@ -14,13 +14,28 @@
                 <div class="col"></div>
                 <div class="col">
                     <h1 class="login">Faça seu Login!</h1>
-                    <form action="receber_post.php" method="POST">
+                    <form method="POST">
                         <label class="e-mail mt-3">E-mail:</label>
                         <input id="e-mail" class="form-control mt-2" type="text" name="e-mail" placeholder="Insira seu E-mail aqui" aria-label="default input example">
                         <label class="senha mt-3">Crie sua Senha:</label>
                         <input id="senha" class="form-control mt-2" type="password" name="senha" placeholder="Insira sua Senha aqui" aria-label="default input example">
-                        <button type="submit" class="btn btn-outline-primary mt-3">Realizar Login</button>
+                        <button type="submit" class="btn btn-outline-primary mt-3 mb-3">Realizar Login</button>
+                        <button type="button" class="btn btn-outline-primary mt-3 mb-3">Realizar Cadastro</button>
                     </form>
+                    <?php
+
+                    if(isset($_POST["e-mail"])){
+                        $email = $_POST["e-mail"];
+                        $senha = $_POST["senha"];
+                        if($email == "renatohgsoares@gmail.com" && $senha == 16240516){
+                            echo '<p style="color: green">Login realizado com sucesso</p>';
+                        }else{
+                            echo  '<p style="color: red";>E-mail ou Senha incorretos</p>';
+                            //echo '<script> alert("abobora"); </script>';
+                        }
+                    }
+                
+                    ?>
                 </div>
                 <div class="col"></div>
             </div>
