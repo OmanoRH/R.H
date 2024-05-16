@@ -7,13 +7,6 @@
     </head>
     <body>
     <?php
-
-    if(isset($_GET["rua"])){
-        $rua = $_GET["rua"];
-        $numero = $_GET["numero"];
-        $bairro = $_GET["bairro"];
-        echo " Rua: $rua <br> Nr: $numero <br> Bairro: $bairro";
-    }
     ?>
     </body>
 </html>

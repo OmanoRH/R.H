@@ -8,13 +8,19 @@
     <body>
     <?php
 
-    if(isset($_POST['nome'])){
-        $nome = $_POST['nome'];
-        $idade = $_POST['idade'];
-        $senha = $_POST['senha'];
-        echo "$nome <br> $idade <br> $senha";
-    }
-    ?>
+        if(isset($_POST["e-mail"])){
+            $email = $_POST["e-mail"];
+            $senha = $_POST["senha"];
+            if($email == "renatohgsoares@gmail.com" && $senha == 16240516){
+                echo "$email $senha";
+            }else{
+                "<script>
+                
+                </script>";
+            }
+        }
+
+        ?>
     </body>
 </html>
 
