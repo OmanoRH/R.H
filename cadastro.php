@@ -15,7 +15,7 @@
                 <div class="col">
                     <form method="POST">
                         <label for="e-mail">E-mail <i class="mdi mdi-information-outline" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i></label>
-                        <input  class="form-control is-invalid mt-2" type="text" name="email" <?php if(isset($erroEmail)){if($erroEmail !== "Nenhum"){echo "is-invalid";}}?> placeholder="Insira seu E-mail" aria-label="default input example">
+                        <input  class="form-control <?php if(isset($erroEmail)){if($erroEmail !== "Nenhum"){echo "is-invalid";}}?> mt-2" type="text" name="email" placeholder="Insira seu E-mail" aria-label="default input example">
                         <div class="invalid-feedback">
                         <?php
                         if(isset($erroEmail)){
