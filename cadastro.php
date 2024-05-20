@@ -12,6 +12,7 @@
 
 <body>
     <?php
+            
             if($_SERVER['REQUEST_METHOD'] == "POST"){
                 $email = $_POST["email"];
                 $senha = $_POST["senha"];
@@ -20,6 +21,7 @@
                 $numero = $_POST["numero"];
                 $idade = $_POST["idade"];
 
+                //Verificação de Email
             if(empty($email)){
                 $erroEmail = "Por favor, informe um E-mail";
             }else{
@@ -60,7 +62,7 @@
             if(empty($idade)){
                 $erroIdade = "Por favor, Informe sua Idade";
             }else{
-                if(strlen($idade) <= 18){
+                if($idade < 18){
                     $erroIdade = "Por favor, Informe uma idade maior ou igual a 18 anos";
                 }else{
                     $erroIdade = "Nenhum";
@@ -71,12 +73,15 @@
             }
             }
         ?>
-
+    <!-- Interface -->
     <div class="container">
         <div class="row">
             <h1 style="text-align: center;">Vamos Realizar seu Cadastro em nosso Site!</h1>
             <div class="col">
-                <form method="POST">
+
+
+            <!-- Formulario de Cadastro -->
+                <form method="POST" novalidate>
                     <label for="email" class="mt-3">E-mail <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
@@ -114,6 +119,7 @@
                         class="form-control <?php if(isset($erroSenhac)){if($erroSenhac != "Nenhum"){echo "is-invalid";}}?> mt-2"
                         name="senhac" placeholder="Repita a Senha que criou" type="password"
                         aria-label="default input example">
+
                     <div class="invalid-feedback">
                         <?php
                         if(isset($erroSenhac)){
@@ -123,6 +129,8 @@
                         }
                         ?>
                     </div>
+
+                        <!-- Cadastro de Nome e Sobrenome -->
                     <label for="nome" class="mt-3">Nome e Sobrenome <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
@@ -139,16 +147,20 @@
                         }
                         ?>
                     </div>
+
+                        <!-- Cadastro de Numero -->
                     <label for="numero" class="mt-3">Número <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Titulo do Balão"></i>
                     </label>
                     <input class="form-control mt-2" name="numero" placeholder="Insira seu Número telefone" type="text"
                         aria-label="default input example">
 
+
+                        <!-- Cadastro de Idade -->
                     <label for="idade" class="mt-3">Idade <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
-                    <input type="number" name="idade"
+                    <input type="text" name="idade"
                         class="form-control <?php if(isset($erroIdade)){if($erroIdade != "Nenhum"){echo "is-invalid";}}?> mt-2"
                         placeholder="Selecione sua Idade" name="idade" aria-label="default input example">
                     <div class="invalid-feedback">
@@ -160,8 +172,9 @@
                         }
                         ?>
                     </div>
-                    <button type="submit" class="btn btn-outline-primary mt-3 mb-3">Realizar Cadastro <i
-                            class="mdi mdi-send"></i> </button>
+
+                        <!-- Butão de Realizar Cadastro -->
+                    <button type="submit" class="btn btn-outline-primary mt-3 mb-3">Realizar Cadastro<i class="mdi mdi-send"></i></button>
                 </form>
             </div>
         </div>
