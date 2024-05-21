@@ -8,6 +8,8 @@
 
     <!-- Linkagem CSS -->
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
+
+    <!-- Linkagem do MDI -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 
