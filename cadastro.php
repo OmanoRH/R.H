@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
 
+    <!-- Linkagem CSS -->
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
@@ -21,7 +22,7 @@
                 $numero = $_POST["numero"];
                 $idade = $_POST["idade"];
 
-                //Verificação de Email
+                //Cadastro de Email
             if(empty($email)){
                 $erroEmail = "Por favor, informe um E-mail";
             }else{
@@ -32,6 +33,8 @@
                   }
             }
 
+
+            //Cadastro de Nome
             if(empty($nome)){
                 $erroNome = "Por favor, Informe um Nome e Sobrenome";
             }else{
@@ -41,6 +44,9 @@
                     $erroNome = "Nenhum";
                   }
             }
+
+
+            //Cadastro de Senha
             if(empty($senha)){
                 $erroSenha = "Por favor, informe uma senha";
             }else{
@@ -50,6 +56,9 @@
                     $erroSenha = "Nenhum";
                 }
             }
+
+
+            //Comfirmação de senha
             if(empty($senhac)){
                 $erroSenhac = "Por favor, repetir a senha";
             }else{
@@ -59,6 +68,9 @@
                     $erroSenhac = "Nenhum";
                 }
             }
+
+
+            //Cadastro de Idade
             if(empty($idade)){
                 $erroIdade = "Por favor, Informe sua Idade";
             }else{
@@ -68,11 +80,16 @@
                     $erroIdade = "Nenhum";
                 }
             }
+
+
+            //Linkagem a proxima pagina
             if($erroEmail == "Nenhum" && $erroNome == "Nenhum" && $erroSenha == "Nenhum" && $erroSenhac == "Nenhum" && $erroIdade == "Nenhum"){
                 header("location: brigado.html");
             }
             }
         ?>
+
+
     <!-- Interface -->
     <div class="container">
         <div class="row">
@@ -82,6 +99,9 @@
 
             <!-- Formulario de Cadastro -->
                 <form method="POST" novalidate>
+
+
+                <!-- Campo de Texto do Email -->
                     <label for="email" class="mt-3">E-mail <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
@@ -97,6 +117,9 @@
                         }
                         ?>
                     </div>
+
+
+                    <!-- Campo de Texto da Senha -->
                     <label for="senha" class="mt-3">Senha <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
@@ -112,6 +135,9 @@
                         }
                         ?>
                     </div>
+
+
+                    <!-- Campo de Texto da Comfirmação da Senha -->
                     <label for="senhac" class="mt-3">Comfirme sua Senha <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
@@ -130,7 +156,8 @@
                         ?>
                     </div>
 
-                        <!-- Cadastro de Nome e Sobrenome -->
+
+                        <!-- Campo de Texto do Nome e Sobrenome -->
                     <label for="nome" class="mt-3">Nome e Sobrenome <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
@@ -148,7 +175,8 @@
                         ?>
                     </div>
 
-                        <!-- Cadastro de Numero -->
+
+                        <!-- Campo de Texto de Numero -->
                     <label for="numero" class="mt-3">Número <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Titulo do Balão"></i>
                     </label>
@@ -156,7 +184,7 @@
                         aria-label="default input example">
 
 
-                        <!-- Cadastro de Idade -->
+                        <!-- Campo de Texto da Idade -->
                     <label for="idade" class="mt-3">Idade <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
@@ -173,18 +201,26 @@
                         ?>
                     </div>
 
+
                         <!-- Butão de Realizar Cadastro -->
                     <button type="submit" class="btn btn-outline-primary mt-3 mb-3">Realizar Cadastro<i class="mdi mdi-send"></i></button>
                 </form>
             </div>
         </div>
     </div>
+    
 
+    <!-- Linkagem do JS -->
     <script src="JS/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Configuração do Balão -->
     <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
+
+    
 </body>
 
 </html>
