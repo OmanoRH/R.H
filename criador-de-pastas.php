@@ -25,7 +25,7 @@
             }
 
 
-            $nome_arquivo = date('y-m-d-H-i-s').".txt";
+           /* $nome_arquivo = ".txt";
             $arquivo = fopen($pasta1.$nome_arquivo, 'a+');
             fwrite($arquivo, "<qnwejfwnfgwejkngwgnwekgwnegkweng".PHP_EOL);
             fwrite($arquivo, "3ROIQWJEOI0WJMTGEWPKGJMWEGPKLEWMJNGKWERPGMNEPOGEWMGPWGMNERGNWEKLRGG".PHP_EOL);
@@ -50,7 +50,31 @@
 
                     }
                 }
+            }*/
+        
+            $agora = date("Y/m/d H:i:s");
+            echo "$agora <br>";
+            
+            $hoje = date("l F Y");
+            echo "Today is $hoje <br>";
+
+            
+            $data_niver = "2024/10/16";
+            $data_hoje = date("Y/m/d");
+
+            $data = strtotime($data_niver) - strtotime($data_hoje); 
+            $ate_niver = floor($data / (60*60*24));
+
+            if ($ate_niver > 0) {
+                echo "Meu aniversário é daqui a $ate_niver dias";
+            } elseif ($ate_niver < 0) {
+                echo "Meu aniversário foi a $ate_niver dias atrás";
+            } else {
+                echo "MEU ANIVERSÁRIO É HOJE";
             }
+
+            $data_formatada = explode("/", $agora);
+            $data_formatada = $data_formatada[2]."/".$data_formatada[1]."/".$data_formatada[0];
 
         ?>
 
