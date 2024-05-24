@@ -73,7 +73,7 @@
                 echo "MEU ANIVERSÁRIO É HOJE";
             }
 
-            $data_formatada = explode("/", $agora);
+            $data_formatada = explode("/", $data_hoje);
             $data_formatada = $data_formatada[2]."/".$data_formatada[1]."/".$data_formatada[0];
 
         ?>
