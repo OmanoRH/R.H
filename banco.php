@@ -10,7 +10,7 @@
             $servidor = "localhost";
             $usuario = "root";
             $senha = "";
-            $banco = "restaurante";
+            $banco = "cadastro";
         ?>
 
         <?php $pdo = new PDO("mysql:host=$servidor;dbname=$banco", "$usuario", "$senha");?>
