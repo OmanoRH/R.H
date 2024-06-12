@@ -27,7 +27,7 @@
         <?php
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $email = $_POST['email'];
-                $pass = md5($_POST['pass']);
+                $pass = $_POST['pass'];
 
 
                 //Cadastro de Email
@@ -55,13 +55,13 @@
 
                 //Validação de Usuario
                 if ($erroEmail == "Nenhum" && $erroPass == "Nenhum") {
+                    //Conexão com o Banco de Dados
+                    $sql = $pdo -> prepare("INSERT INTO usuario VALUES (null, ?, ?);");
+                    $sql -> execute([$email, md5($pass)]);
                     header("location: brigado.html");
                 }
             }
 
-            //Conexão com o Banco de Dados
-            $sql = $pdo -> prepare("INSERT INTO usuario VALUES (null, ?, ?);");
-            $sql -> execute(array($email, $pass));
         ?>
 
         <div class="wrapper fadeInDown">
@@ -71,8 +71,29 @@
             <h2 class="active"> Cadastro </h2>
 
                 <form class="box-login" method="post" action="#">
-                  <input type="email" id="email" class="campo" name="email" placeholder="E-mail">
-                  <input type="text" id="password" class="campo" name="senha" placeholder="Senha">
+                  <input type="email" id="email" class="<?php if(isset($erroEmail)){if($erroEmail != "Nenhum"){echo "is-invalid";}}?> campo" name="email" placeholder="E-mail">
+                  <div class="invalid-feedback">
+                        <?php
+                        if(isset($erroEmail)){
+                            if($erroEmail != "Nenhum"){
+                                echo $erroEmail;
+                            }
+                        }
+                        ?>
+                    </div>
+
+                  <input type="text" id="password" class="<?php if(isset($erroPass)){if($erroPass != "Nenhum"){echo "is-invalid";}}?> campo" name="pass" placeholder="Senha">
+                  <div class="invalid-feedback">
+                        <?php
+                        if(isset($erroPass)){
+                            if($erroPass != "Nenhum"){
+                                echo $erroPass;
+                            }
+                        }
+                        ?>
+                    </div>
+
+
                   <input type="submit" class="botao" value="Entrar">
                 </form>
 

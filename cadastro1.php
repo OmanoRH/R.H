@@ -110,9 +110,7 @@
                     <label for="email" class="mt-3">E-mail <i class="mdi mdi-information-outline"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
-                    <input
-                        class="form-control <?php if(isset($erroEmail)){if($erroEmail != "Nenhum"){echo "is-invalid";}}?> mt-2"
-                        type="text" name="email" placeholder="Insira seu E-mail" aria-label="default input example">
+                    <input class="form-control <?php if(isset($erroEmail)){if($erroEmail != "Nenhum"){echo "is-invalid";}}?> mt-2" type="text" name="email" placeholder="Insira seu E-mail" aria-label="default input example">
                     <div class="invalid-feedback">
                         <?php
                         if(isset($erroEmail)){
@@ -129,8 +127,7 @@
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"></i>
                     </label>
                     <input
-                        class="form-control <?php if(isset($erroSenha)){if($erroSenha != "Nenhum"){echo "is-invalid";}}?> mt-2"
-                        name="senha" placeholder="Crie sua Senha" type="password" aria-label="default input example">
+                        class="form-control <?php if(isset($erroSenha)){if($erroSenha != "Nenhum"){echo "is-invalid";}}?> mt-2" name="senha" placeholder="Crie sua Senha" type="password" aria-label="default input example">
                     <div class="invalid-feedback">
                         <?php
                         if(isset($erroSenha)){
